@@ -18,9 +18,34 @@ ostream &operator << (ostream &dout,point p1){
     dout<<p1.x<<" "<<p1.y<<" "<<p1.z<<endl;
     return (dout);
 }
+point operator + (point p1, point p2){
+    point p;
+    p.x=p1.x+p2.x;
+    p.y=p1.y+p2.y;
+    p.z=p1.z+p2.z;
+    return p;
+}
+point operator -(point p1,point p2){
+    point p;
+    p.x=p1.x-p2.x;
+    p.y=p1.y-p2.y;
+    p.z=p1.z-p2.z;
+    return p;
+}
+bool operator ==(point p1,point p2){
+    if(p1.x!=p2.x||p1.y!=p2.y||p1.z!=p2.z) return false;
+    else return true;
+}
+bool operator !=(point p1,point p2){
+    if(p1.x!=p2.x||p1.y!=p2.y||p1.z!=p2.z) return true;
+    else return false;
+}
 int main() {
-point p;
-cin>>p;
-cout<<p;
+point p1,p2;
+cin>>p1>>p2;
+cout<<p1+p2;
+cout<<p1-p2;
+if(p1==p2) cout<<"2 diem bang nhau";
+else cout<<"2 diem khac nhau";
     return 0;
 }
