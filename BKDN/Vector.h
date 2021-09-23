@@ -1,4 +1,5 @@
 #pragma once
+class Matrix;
 class Vector
 {
 private:
@@ -11,4 +12,5 @@ public:
     Vector(const Vector &);
     ~Vector();
     void Show();
+    Vector mulMatrix(const Matrix);
 };
