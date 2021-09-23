@@ -1,9 +1,7 @@
-
 #include<iostream>
 #include"Vector.h"
+#include"Matrix.h"
 using namespace std;
-
-
 Vector::Vector(int n,int m){
         this->n=n;
         //xin mot mang moi
@@ -30,4 +28,15 @@ void Vector::Show(){
 
 Vector::~Vector(){
     delete[] this-> p;
+}
+Vector Vector::mulMatrix(Matrix mat){
+    Vector v;
+    v.n=mat.c;
+    for(int i=0;i<mat.c;i++){
+        *(v.p+i)=0;
+        for(int j=0;j<mat.r;j++){
+            *(v.p+i)=*(v.p+i)+*(this->p+j)**(*(mat.p+j)+i);
+        }
+    }
+    return v;
 }
