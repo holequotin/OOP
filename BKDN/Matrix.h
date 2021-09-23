@@ -1,4 +1,7 @@
+
 #pragma once
+#include"Vector.h"
+
 class Matrix
 {
 private:
@@ -11,4 +14,5 @@ public:
     Matrix(const Matrix &);
     ~Matrix();
     void Show();
+    friend Vector Vector :: mulMatrix(Matrix);
 };
