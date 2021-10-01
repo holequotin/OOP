@@ -1,0 +1,20 @@
+1/Biến cục bộ và biến toàn cục
+-Khi gọi trong một cục {} thì nó sẽ tự hiểu à gọi biến cục bộ, nếu muốn kêu biến toàn cục thì dùng toán tử định phạm vi ::
+2/Định dạng in
+-Chú ý 2 hàm setw() và setprecision()
+  +set();quy định độ rộng tối thiểu
+  +setprecision():số các chữ số thập phân
+3/Biến tham chiếu:
+Cú pháp: int &y=x;
+Khi khao báo phải khai báo luôn là nó đang tham chiếu (sử dụng chung vùng nhớ với thằng nào) 
+Có thể tham chiếu đến phần tử của mảng như không tham chiếu được đến mảng
+4/Hằng tham chiếu:
+-Là sự kết hợp giữa biến tham chiếu và hăng: dùng chung bộ nhớ với thằng khác nhưng không thể tự thay đổi giá trị, thằng mà nó tham chiếu tới thì được
+5/Truyền tham chiếu cho hàm
+-Khi truyền tham chiếu cho hàm, khi ta thay đổi giá trị của tham chiếu, tức là đã thay đổi vùng nhớ của nó, thằng dùng chung vùng nhớ với nó cũng bị ảnh hưởng
+Note:Khi kiểm tra chú ý thằng truyển tham chiếu có const
+6/Các đối số mặc định:
+-Nếu chương trình sử dụng khai báo nguyên mẫu hàm thì các đối số mặc định càn được khởi gán trong nguyên mẫu hàm, không được khởi gán lại cho các đối số mặc định trong dòng đầu của định
+nghĩa hàm
+-Đối với các hàm có đối số mặc định thì lời gọi hàm cần viết theo quy định: các tham số vắng mặt trong lời gọi hàm tương ứng với các đối số mặc định cuối cùng (tính từ trái sang phải)
+7/Hàm rả về tham chiếu:
